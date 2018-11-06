@@ -1,17 +1,14 @@
-
-
-/**
- * IMPORTANT: Make sure you are using the correct package name.
- * This example uses the package name:
- * package com.example.android.justjava
- * If you get an error when copying this code into Android studio, update it to match teh package name found
- * in the project's AndroidManifest.xml file.
- **/
+/*
+  IMPORTANT: Make sure you are using the correct package name.
+  This example uses the package name:
+  package com.example.android.justjava
+  If you get an error when copying this code into Android studio, update it to match teh package name found
+  in the project's AndroidManifest.xml file.
+ */
 package com.example.jcesa.justjavaapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -30,22 +27,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public String getNameOfClient() {
-        EditText getNameEditTExt = findViewById(R.id.client_name);
-        getNameEditTExt.setAutofillHints(View.AUTOFILL_HINT_NAME);
-        return getNameEditTExt.getText().toString();
-    }
 
     /**
      * This method show a resume message
      *
      * @param price           of the order
-     * @param hasChocolate    of the order
      * @param addWhippedCream is whether or not  the user wants whipped cream topping
+     * @param hasChocolate    of the order
+     * @param hasNameClient   name of client
      * @return text summary
      */
-    private String createOrderSummary(int price, boolean addWhippedCream, boolean hasChocolate) {
-        String priceMessage = "Name: " + getNameOfClient();
+    private String createOrderSummary(int price, boolean addWhippedCream, boolean hasChocolate, String hasNameClient) {
+        String priceMessage = "Name: " + hasNameClient;
         priceMessage += "\nAdd Whipped Cream? " + addWhippedCream;
         priceMessage += "\nAdd Chocolate? " + hasChocolate;
         priceMessage += "\nQuantity: " + quantity;
@@ -58,12 +51,18 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
+        /* get name of client*/
+        EditText getNameEditTExt = findViewById(R.id.client_name);
+        getNameEditTExt.setAutofillHints(View.AUTOFILL_HINT_NAME);
+        String hasNameClient = getNameEditTExt.getText().toString();
+        /* if user wants whipped Cream */
         CheckBox whippedCreamCheckBox = findViewById(R.id.whipped_cream_checkbox);
+        boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
+        /* if user wants chocolate */
         CheckBox chocolateCheckBox = findViewById(R.id.chocolate_checkbox);
         boolean hasChocolate = chocolateCheckBox.isChecked();
-        boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
         int price = calculatePrice();
-        String priceMessage = createOrderSummary(price, hasWhippedCream, hasChocolate);
+        String priceMessage = createOrderSummary(price, hasWhippedCream, hasChocolate, hasNameClient);
         displayMessage(priceMessage);
     }
 
