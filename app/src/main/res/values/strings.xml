@@ -1,15 +1,18 @@
-<resources>
-    <string name="app_name">JustJavaApp</string>
-    <string name="text_cantidad">Quantity</string>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">JustJavaApp </string>
+    <string name="text_cantidad">Quantity </string>
     <string name="text_ordenar">Order</string>
-    <string name="text_precio">Order Summary</string>
-    <string name="text_whippedCream">Whipped Cream</string>
-    <string name="text_chocolate">Chocolate</string>
-    <string name="client_text">Client</string>
-    <string name="your_name">Your name</string>
-    <string name="_10">$10</string>
+    <string name="text_precio">Order Summary </string>
+    <string name="text_whippedCream">Whipped Cream </string>
+    <string name="text_chocolate">Chocolate </string>
+    <string name="client_text">Client </string>
+    <string name="your_name">Your name </string>
+    <string name="_10">$10 </string>
     <string name="sing_plus">+</string>
     <string name="first_number">2</string>
     <string name="sing_minus">-</string>
-    <string name="toppins">toppins</string>
+    <string name="toppins">toppins </string>
+    <string name="thank_you"> Thank you!" </string>
+    <string name="add_whipped_cream">Add Whipped Cream? </string>
+    <string name="order_summary_name">Name:<xliff:g example="Amy" id="name">%s</xliff:g></string>
 </resources>
