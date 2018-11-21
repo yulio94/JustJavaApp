@@ -10,15 +10,6 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:labelFor="@id/client_name"
-            android:text="@string/client_text"
-            android:textAllCaps="true"
-            android:textSize="20sp" />
-
         <EditText
             android:id="@+id/client_name"
             android:layout_width="300dp"
@@ -29,18 +20,13 @@
             tools:ignore="LabelFor" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/toppins"
-            android:textAllCaps="true"
-            android:textSize="20sp" />
+            style="@style/HeaderTextSize"
+            android:text="@string/toppins" />
 
         <CheckBox
             android:id="@+id/whipped_cream_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
             android:paddingStart="@dimen/padding_checkBox"
             android:text="@string/text_whippedCream"
             android:textSize="16sp" />
@@ -49,20 +35,14 @@
             android:id="@+id/chocolate_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
             android:paddingStart="@dimen/padding_checkBox"
             android:text="@string/text_chocolate"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/cantidad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/text_cantidad"
-            android:textAllCaps="true"
-            android:textSize="20sp" />
+            style="@style/HeaderTextSize"
+            android:text="@string/text_cantidad" />
 
         <LinearLayout
             android:id="@+id/selector"
@@ -76,7 +56,7 @@
                 android:layout_width="53dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="5dp"
-                android:background="@color/Button"
+
                 android:onClick="decrement"
                 android:text="@string/sing_minus"
                 android:textSize="20sp" />
@@ -96,32 +76,17 @@
                 android:layout_width="53dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:background="@color/Button"
                 android:onClick="increment"
                 android:text="@string/sing_plus"
                 android:textSize="20sp" />
 
         </LinearLayout>
 
-        <TextView
-
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:text="@string/text_precio"
-            android:layout_marginBottom="15dp"
-            android:textAllCaps="true"
-            android:textSize="20sp" />
-
-
-
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:background="@color/Button"
             android:onClick="submitOrder"
             android:text="@string/text_ordenar"
             android:textSize="16sp" />

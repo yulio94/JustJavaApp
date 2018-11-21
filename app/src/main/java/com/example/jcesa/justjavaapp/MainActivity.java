@@ -81,8 +81,8 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Calculates the price of the order.
      *
-     * @param hasChocolate
-     * @param hasWhippedCream
+     * @param hasChocolate    variable chocolate
+     * @param hasWhippedCream variable crema batida
      * @return total price
      */
     private int calculatePrice(boolean hasChocolate, boolean hasWhippedCream) {
